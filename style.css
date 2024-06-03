@@ -144,7 +144,7 @@
 
   .container {
     display: flex;
-    justify-content: space-between; /* Adjust as needed */
+    justify-content: space-between; 
     justify-content: center;
 }
 .card {
@@ -160,12 +160,12 @@
     transition: box-shadow 0.3s;
 }
 .card:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Increase spread and opacity */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
 }
 .card-container {
     display: flex;
-    flex-direction: column; /* Display cards in a column */
-    align-items: center; /* Center cards horizontally */
+    flex-direction: column; 
+    align-items: center; 
 }
 
 
@@ -174,16 +174,14 @@
     height: 150px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: box-shadow 0.3s, background-color 0.3s; /* Added background-color transition */
+    margin: 5px;
+    text-align: start;
+    transition: box-shadow 0.3s, background-color 0.3s; 
 }
+
 .card2:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Increase spread and opacity */
-    background-color: red; /* Change background color on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+    background-color: red; 
 }
 
 .footer{
@@ -191,15 +189,15 @@
     color: white;
     padding: 70px;
     text-align: center;
-    width: 100%; /* Set the footer width to 80% */
-    margin: auto; /* Center the footer horizontally */
+    width: 100%; 
+    margin: auto; 
     
 }
 
   .logo {
-    width: 50px; /* Adjust the width of the logos as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 10px; /* Adjust spacing between logos */
+    width: 50px; 
+    height: auto; 
+    margin: 0 10px; 
   }
 
 
@@ -242,19 +240,19 @@
 
 
   .card-group  {
-    display: flex; /* Display cards in a row */
-    flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
-    justify-content: space-between; /* Space out the cards evenly */
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
   }
   .card-group .card3 {
     position: relative;
-    width: calc(23.33% - 10px); /* Adjust the width of each card. Here, each card takes approximately one-third of the container width */
-    margin-bottom: 20px; /* Add margin between cards */
-    box-sizing: border-box; /* Include padding and border in the card's total width */
-    border: 1px solid #ddd; /* Add a border around each card */
-    border-radius: 2px; /* Add rounded corners to the cards */
-    padding: 10px; /* Add padding inside each card */
-    background-color: #f9f9f9; /* Set a background color for the cards */
+    width: calc(23.33% - 10px); 
+    margin-bottom: 20px; 
+    box-sizing: border-box; 
+    border: 1px solid #ddd; 
+    border-radius: 2px; 
+    padding: 10px; 
+    background-color: #f9f9f9; 
   }
   .card-group .card3 .card-body .card-title {
     position: relative;
@@ -268,7 +266,7 @@
   }
 
   .card-group .card3 .card-img-top {
-margin-left: 20px;
+    margin-left: 20px;
     margin-right: 500px;
   }
 
@@ -301,6 +299,6 @@ margin-left: 20px;
   }
   .input-line {
 border: none;
-border-bottom: 1px solid #ced4da; /* Add bottom border to mimic input lines */
-border-radius: 0; /* Remove border-radius */
+border-bottom: 1px solid #ced4da; 
+border-radius: 0; 
   }
