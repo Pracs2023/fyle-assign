@@ -20,9 +20,35 @@
          <h1 style="font-size: 45px; font-weight: 850;">DIGITAL MARKETING <br> AGENCY</h1>
          <br>  <br>
          <h5 >Lorem, ipsum dolor squam, tenetusatpsum dolor sit <br> amet consectetur adipisicing elit. Quisquam, tenetusat.</h5>
-         <br><br>
-         <br>
-         <button type="button" class="btn btn-danger">CONTACT US</button>
+         <br><br><br>
+         
+         <button type="button" id="openFormBtn" class="btn btn-danger">CONTACT US</button>
+
+<div id="popupForm" class="popup">
+  <div class="popup-content" style="margin-bottom: 30px;">
+    <h5 style="font-weight: 700; font-size: 20px;">Talk to Us</h5> 
+    <span class="close" id="closeFormBtn">&times;</span>
+    <form id="myForm">
+        <div class="form-group" style="margin-bottom: 15px;">
+          <input type="email" placeholder="Work email*" class="form-control input-line" id="email" name="email" required>
+        </div>
+        <div class="form-row" style="margin-bottom: 25px;">
+          <div class="form-group col-md-6">
+            <input type="text" placeholder="First name*" class="form-control input-line" id="firstName" name="firstName" required>
+          </div>
+          <div class="form-group col-md-6">
+            <input type="text" placeholder="Last name*" class="form-control input-line" id="lastName" name="lastName" required>
+          </div>
+        </div>
+        <div class="form-check" style="margin-bottom: 20px;">
+          <input type="checkbox" class="form-check-input" id="agreeCheckbox" required>
+          <label class="form-check-label" for="agreeCheckbox">I agree to Fyle's terms and conditions,and provide consent <br>to send me communication</label>
+        </div>
+        <button  type="submit" class="btn btn-danger btn-block">Contact Us</button>
+      </form>
+      
+  </div>
+</div>
         </div>
         <div>
             <img src="./img1.jpg" style="  width: 205px; height: 400px;"> </img>
@@ -224,5 +250,38 @@ $(document).ready(function(){
        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#openFormBtn").click(function(){
+      $("#popupForm").show();
+    });
+  
+    $("#closeFormBtn").click(function(){
+      $("#popupForm").hide();
+    });
+  
+    $("#myForm").submit(function(event){
+      event.preventDefault();
+      
+      const formData = $(this).serialize();
+      
+      $.ajax({
+        type: "POST",
+        url: "https://getform.io/f/pbqgpyxb",
+        data: formData,
+        success: function(response){
+          alert("Form submitted successfully!");
+          $("#popupForm").hide();
+          $("#myForm")[0].reset();
+        },
+        error: function(xhr, status, error){
+          alert("Failed to submit form. Please try again.");
+          console.error(xhr, status, error);
+        }
+      });
+    });
+  });
+</script>
       </body>
       </html> 
