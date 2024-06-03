@@ -26,3 +26,8 @@
 
 
 ✅Hosted my project using GitHub pages.
+
+
+✅Hosted URL : https://pracs2023.github.io/fyle-assign/
+
+
